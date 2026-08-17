@@ -114,7 +114,9 @@ export default function ServicesSection() {
         description="Bring your vision to life with captivating animated video designed to engage, explain, and inspire your audience."
       />
 
-      <div className="mt-8 sm:mt-10">
+      <div className="mt-8 sm:mt-10 relative">
+        <span className="hidden md:block absolute h-full w-80 bg-linear-to-r from-white to-transparent top-0 left-0 z-50 pointer-events-none"></span>
+        <span className="hidden md:block absolute h-full w-80 bg-linear-to-r to-white from-transparent top-0 right-0 z-50 pointer-events-none"></span>
         <CustomSlider
           items={serviceCards}
           itemClassName="max-w-[230px] sm:max-w-[250px] lg:max-w-[285px]"
