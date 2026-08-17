@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
+import Hero from "./components/Sections/Hero";
 
 type Props = {};
 
@@ -9,7 +10,11 @@ export const metadata: Metadata = {
 };
 
 const page = (props: Props) => {
-  return <div>page</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default page;

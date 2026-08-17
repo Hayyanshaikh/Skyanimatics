@@ -16,13 +16,26 @@ export default function CustomButton({
 }: CustomButtonProps) {
   const customVariant = variant === "gradient" ? "custom-button-gradient" : "";
 
+  const outlineVariant = variant === "outline" ? "custom-button-outline" : "";
+
   return (
     <Button
       variant={variant === "gradient" ? "default" : variant}
       onClick={onClick}
       className={cn(
-        "custom-button h-14 rounded-[10px] cursor-pointer text-[16px]",
+        // Base
+        "custom-button cursor-pointer rounded-[10px]",
+
+        // Responsive sizing
+        "h-11 px-5 text-sm",
+        "sm:h-12 sm:px-5 sm:text-[15px]",
+        "md:h-14 md:px-6 md:text-[16px]",
+
+        // Mobile full width if needed
+        " sm:w-auto",
+
         customVariant,
+        outlineVariant,
         className,
       )}
     >
