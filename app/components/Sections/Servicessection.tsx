@@ -59,74 +59,106 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const serviceCards = services.map((service, i) => (
-    <div
-      key={i}
-      className="rounded-[12px] overflow-hidden border border-gray-100"
-    >
-      {/* Image */}
-      <div className="relative w-full h-40 sm:h-52 lg:h-63.5 rounded-[16px]">
-        <Image
-          src={service.image}
-          alt={service.title}
-          fill
-          sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-          className="object-cover rounded-b-[16px]"
-        />
+  const serviceCards = services.map((service, i) => {
+    const isPurple = i % 4 >= 2;
 
-        {/* Play Button */}
-        <div className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-          <div className="absolute w-16 h-16 sm:w-20 sm:h-20 lg:w-23 lg:h-23 bg-[#FEDC5A]/5 rounded-full" />
-          <div className="absolute w-15 h-15 sm:w-18 sm:h-18 lg:w-21 lg:h-21 bg-[#FEDC5A]/10 rounded-full" />
-          <div className="absolute w-14 h-14 sm:w-16 sm:h-16 lg:w-19 lg:h-19 bg-[#FEDC5A]/30 rounded-full" />
-          <div className="absolute w-12 h-12 sm:w-14 sm:h-14 lg:w-17 lg:h-17 bg-[#FEDC5A]/50 rounded-full" />
+    return (
+      <div
+        key={i}
+        className="rounded-[12px] overflow-hidden border border-gray-100 bg-white"
+      >
+        {/* Image */}
+        <div className="relative w-full h-40 sm:h-52 lg:h-63.5 rounded-[16px]">
+          <Image
+            src={service.image}
+            alt={service.title}
+            fill
+            sizes="(max-width: 640px) 230px, (max-width: 1024px) 250px, 285px"
+            className="object-cover rounded-b-[16px]"
+          />
 
-          <div className="relative h-10 w-10 sm:h-12 sm:w-12 lg:h-15 lg:w-15 bg-[#FEDC5A]/50 rounded-full flex items-center justify-center">
-            <Play
-              fill="white"
-              stroke="white"
-              size={16}
-              className="sm:w-4.5 sm:h-4.5 lg:w-5.5 lg:h-5.5"
+          {/* Play Button */}
+          <div className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+            <div
+              className={`absolute w-16 h-16 sm:w-20 sm:h-20 lg:w-23 lg:h-23 rounded-full ${
+                isPurple ? "bg-[#5454D4]/5" : "bg-[#FEDC5A]/5"
+              }`}
             />
+
+            <div
+              className={`absolute w-15 h-15 sm:w-18 sm:h-18 lg:w-21 lg:h-21 rounded-full ${
+                isPurple ? "bg-[#5454D4]/10" : "bg-[#FEDC5A]/10"
+              }`}
+            />
+
+            <div
+              className={`absolute w-14 h-14 sm:w-16 sm:h-16 lg:w-19 lg:h-19 rounded-full ${
+                isPurple ? "bg-[#5454D4]/30" : "bg-[#FEDC5A]/30"
+              }`}
+            />
+
+            <div
+              className={`absolute w-12 h-12 sm:w-14 sm:h-14 lg:w-17 lg:h-17 rounded-full ${
+                isPurple ? "bg-[#5454D4]/50" : "bg-[#FEDC5A]/50"
+              }`}
+            />
+
+            <div
+              className={`relative h-10 w-10 sm:h-12 sm:w-12 lg:h-15 lg:w-15 rounded-full flex items-center justify-center ${
+                isPurple ? "bg-[#5454D4]" : "bg-[#FEDC5A]/50"
+              }`}
+            >
+              <Play
+                fill="white"
+                stroke="white"
+                size={16}
+                className="sm:w-4.5 sm:h-4.5 lg:w-5.5 lg:h-5.5"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Content */}
-      <div className="px-2 pb-4 pt-8 sm:px-4 sm:pb-5 sm:pt-10 lg:pt-12.5 text-center">
-        <h3 className="text-base sm:text-xl lg:text-2xl font-semibold text-gray-900">
-          {service.title}
-        </h3>
+        {/* Content */}
+        <div className="px-2 pb-4 pt-8 sm:px-4 sm:pb-5 sm:pt-10 lg:pt-12.5 text-center">
+          <h3 className="text-base sm:text-xl lg:text-2xl font-semibold text-gray-900">
+            {service.title}
+          </h3>
 
-        <p className="text-xs sm:text-sm text-gray-500 mt-1 max-w-55 mx-auto">
-          {service.description}
-        </p>
+          <p className="text-xs sm:text-sm text-gray-500 mt-1 max-w-55 mx-auto">
+            {service.description}
+          </p>
+        </div>
       </div>
-    </div>
-  ));
+    );
+  });
 
   return (
     <section className="py-10 sm:py-14 lg:py-16 bg-white">
-      <CustomHeading
-        reverse
-        line2="Premier Animated"
-        line1="Video Services"
-        description="Bring your vision to life with captivating animated video designed to engage, explain, and inspire your audience."
-      />
-
-      <div className="mt-8 sm:mt-10 relative">
-        <span className="hidden md:block absolute h-full w-80 bg-linear-to-r from-white to-transparent top-0 left-0 z-50 pointer-events-none"></span>
-        <span className="hidden md:block absolute h-full w-80 bg-linear-to-r to-white from-transparent top-0 right-0 z-50 pointer-events-none"></span>
-        <CustomSlider
-          items={serviceCards}
-          itemClassName="max-w-[230px] sm:max-w-[250px] lg:max-w-[285px]"
-          spaceBetween={24}
-          autoplay
-          autoplayDelay={3000}
-          loop
-          centeredSlides
+      <Container>
+        <CustomHeading
+          reverse
+          line2="Premier Animated"
+          line1="Video Services"
+          description="Bring your vision to life with captivating animated video designed to engage, explain, and inspire your audience."
         />
-      </div>
+
+        <div className="mt-8 sm:mt-10 relative">
+          {/* Left Fade */}
+          <span className="hidden md:block absolute h-full w-80 bg-linear-to-r from-white to-transparent top-0 left-0 z-50 pointer-events-none" />
+
+          {/* Right Fade */}
+          <span className="hidden md:block absolute h-full w-80 bg-linear-to-l from-white to-transparent top-0 right-0 z-50 pointer-events-none" />
+
+          <CustomSlider
+            items={serviceCards}
+            itemClassName="max-w-[230px] sm:max-w-[250px] lg:max-w-[285px]"
+            spaceBetween={24}
+            autoplay
+            autoplayDelay={3000}
+            centeredSlides
+          />
+        </div>
+      </Container>
     </section>
   );
 }
