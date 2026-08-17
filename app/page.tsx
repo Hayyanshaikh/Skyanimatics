@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 import Hero from "./components/Sections/Hero";
 import Brands from "./components/Sections/Brands";
+import TrustedBy from "./components/Sections/Trustedby";
 
 type Props = {};
 
@@ -15,6 +16,7 @@ const page = (props: Props) => {
     <>
       <Hero />
       <Brands />
+      <TrustedBy />
     </>
   );
 };
