@@ -20,8 +20,10 @@ export default function CustomHeading({
   return (
     <div
       className={cn(
-        "mb-5",
-        align === "center" ? "text-center" : "text-left",
+        "mb-5 flex flex-col justify-center",
+        align === "center"
+          ? "text-center items-center"
+          : "text-left items-start",
         className,
       )}
     >
@@ -39,7 +41,7 @@ export default function CustomHeading({
         </h2>
       )}
       {description && (
-        <p className="text-sm md:text-base text-gray-500 mt-4 max-w-[578.27px] mx-auto">
+        <p className="text-sm md:text-base text-gray-500 mt-4 max-w-[578.27px]">
           {description}
         </p>
       )}
