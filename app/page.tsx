@@ -10,6 +10,7 @@ import VideoProcessSection from "./components/Sections/Videoprocesssection";
 import ClientsSection from "./components/Sections/Clientssection";
 import FaqSection from "./components/Sections/Faqsection";
 import ConsultationSection from "./components/Sections/ConsultationSection";
+import QuoteSection from "./components/Sections/Quotesection";
 
 type Props = {};
 
@@ -30,6 +31,7 @@ const page = (props: Props) => {
       <VideoProcessSection />
       <ClientsSection />
       <FaqSection />
+      <QuoteSection />
       <ConsultationSection />
     </>
   );
