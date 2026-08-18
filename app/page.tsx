@@ -23,9 +23,9 @@ const page = (props: Props) => {
     <>
       <Hero />
       <Brands />
-      <TrustedBy />
       <StatsSection />
       <BoostSection />
+      <TrustedBy />
       <ServicesSection />
       <VideoProcessSection />
       <ClientsSection />
