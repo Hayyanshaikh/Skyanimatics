@@ -5,6 +5,11 @@ import Brands from "./components/Sections/Brands";
 import TrustedBy from "./components/Sections/Trustedby";
 import StatsSection from "./components/Sections/Statssection";
 import BoostSection from "./components/Sections/Boostsection";
+import ServicesSection from "./components/Sections/Servicessection";
+import VideoProcessSection from "./components/Sections/Videoprocesssection";
+import ClientsSection from "./components/Sections/Clientssection";
+import FaqSection from "./components/Sections/Faqsection";
+import ConsultationSection from "./components/Sections/ConsultationSection";
 
 type Props = {};
 
@@ -21,6 +26,11 @@ const page = (props: Props) => {
       <TrustedBy />
       <StatsSection />
       <BoostSection />
+      <ServicesSection />
+      <VideoProcessSection />
+      <ClientsSection />
+      <FaqSection />
+      <ConsultationSection />
     </>
   );
 };
