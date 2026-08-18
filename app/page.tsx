@@ -6,6 +6,7 @@ import TrustedBy from "./components/Sections/Trustedby";
 import StatsSection from "./components/Sections/Statssection";
 import ServicesSection from "./components/Sections/Servicessection";
 import VideoProcessSection from "./components/Sections/Videoprocesssection";
+import ClientsSection from "./components/Sections/Clientssection";
 
 type Props = {};
 
@@ -23,6 +24,7 @@ const page = (props: Props) => {
       <StatsSection />
       <ServicesSection />
       <VideoProcessSection />
+      <ClientsSection />
     </>
   );
 };

@@ -49,7 +49,7 @@ const items = [
 
 export default function VideoProcessSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
       <Container>
         <CustomHeading
           line1="High-impact creative, with a proven"
