@@ -36,8 +36,9 @@ export default function CustomHeading({
         {line2 && (
           <h2
             className={cn(
-              "text-3xl md:text-[55px] font-semibold text-gradient mt-1",
+              "text-3xl md:text-[55px] font-semibold text-gradient",
               line2ClassName,
+              reverse ? "mb-1" : "mt-1",
             )}
           >
             {line2}

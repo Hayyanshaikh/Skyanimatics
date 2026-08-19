@@ -11,6 +11,7 @@ import ClientsSection from "./components/Sections/Clientssection";
 import FaqSection from "./components/Sections/Faqsection";
 import ConsultationSection from "./components/Sections/ConsultationSection";
 import QuoteSection from "./components/Sections/Quotesection";
+import Casestudiessectiom from "./components/Sections/Casestudiessectiom";
 
 type Props = {};
 
@@ -29,9 +30,10 @@ const page = (props: Props) => {
       <TrustedBy />
       <ServicesSection />
       <VideoProcessSection />
+      <Casestudiessectiom />
       <ClientsSection />
-      <FaqSection />
       <QuoteSection />
+      <FaqSection />
       <ConsultationSection />
     </>
   );

@@ -6,6 +6,7 @@ import { Play } from "lucide-react";
 import Container from "../Custom/Container";
 import CustomHeading from "../Custom/CustomHeading";
 import CustomSlider from "../Custom/CustomSlider";
+import PlayButton from "../Custom/PlayButton";
 
 const services = [
   {
@@ -77,45 +78,7 @@ export default function ServicesSection() {
             className="object-cover rounded-b-[16px]"
           />
 
-          {/* Play Button */}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-            <div
-              className={`absolute w-16 h-16 sm:w-20 sm:h-20 lg:w-23 lg:h-23 rounded-full ${
-                isPurple ? "bg-[#5454D4]/5" : "bg-[#FEDC5A]/5"
-              }`}
-            />
-
-            <div
-              className={`absolute w-15 h-15 sm:w-18 sm:h-18 lg:w-21 lg:h-21 rounded-full ${
-                isPurple ? "bg-[#5454D4]/10" : "bg-[#FEDC5A]/10"
-              }`}
-            />
-
-            <div
-              className={`absolute w-14 h-14 sm:w-16 sm:h-16 lg:w-19 lg:h-19 rounded-full ${
-                isPurple ? "bg-[#5454D4]/30" : "bg-[#FEDC5A]/30"
-              }`}
-            />
-
-            <div
-              className={`absolute w-12 h-12 sm:w-14 sm:h-14 lg:w-17 lg:h-17 rounded-full ${
-                isPurple ? "bg-[#5454D4]/50" : "bg-[#FEDC5A]/50"
-              }`}
-            />
-
-            <div
-              className={`relative h-10 w-10 sm:h-12 sm:w-12 lg:h-15 lg:w-15 rounded-full flex items-center justify-center ${
-                isPurple ? "bg-[#5454D4]" : "bg-[#FEDC5A]/50"
-              }`}
-            >
-              <Play
-                fill="white"
-                stroke="white"
-                size={16}
-                className="sm:w-4.5 sm:h-4.5 lg:w-5.5 lg:h-5.5"
-              />
-            </div>
-          </div>
+          <PlayButton size={95} isPurple={isPurple} />
         </div>
 
         {/* Content */}
