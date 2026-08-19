@@ -204,3 +204,12 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.industry-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  background: linear-gradient(0deg, #ffffff 0%, #ffffff00 20%, #ffffff00 80%, #ffffff 100%);
+}
