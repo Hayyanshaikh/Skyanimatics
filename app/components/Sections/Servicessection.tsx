@@ -78,7 +78,7 @@ export default function ServicesSection() {
             className="object-cover rounded-b-[16px]"
           />
 
-          <PlayButton size={95} isPurple={isPurple} />
+          <PlayButton size={95} color={isPurple ? "#5454d4" : "#FEDC5A"} />
         </div>
 
         {/* Content */}
