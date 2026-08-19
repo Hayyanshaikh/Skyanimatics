@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../Custom/Container";
@@ -76,7 +77,8 @@ export default function Footer() {
         <button
           type="button"
           aria-label="Back to top"
-          className="absolute -top-6 right-4 flex size-12.5 shrink-0 items-center justify-center rounded-full bg-white text-blue-600 md:right-6"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="absolute -top-6 right-4 cursor-pointer flex size-12.5 shrink-0 items-center justify-center rounded-full bg-white text-blue-600 md:right-6"
         >
           <ArrowUp size={20} />
         </button>
