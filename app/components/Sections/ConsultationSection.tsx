@@ -4,7 +4,7 @@ import CustomButton from "../Custom/Custombutton";
 
 export default function ConsultationSection() {
   return (
-    <section className="py-8 sm:py-10 md:py-16">
+    <section className="pt-8 sm:pt-10 md:pt-16">
       <Container className="px-4 sm:px-6">
         <div
           className="
