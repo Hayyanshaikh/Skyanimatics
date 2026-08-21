@@ -213,3 +213,123 @@
   pointer-events: none;
   background: linear-gradient(0deg, #ffffff 0%, #ffffff00 20%, #ffffff00 80%, #ffffff 100%);
 }
+
+@keyframes industryNewUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes industryNewDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes industryOldUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes industryOldDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes industryNumberUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes industryNumberDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes industryContentUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes industryContentDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-industry-new-up {
+  animation: industryNewUp 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-industry-new-down {
+  animation: industryNewDown 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-industry-old-up {
+  animation: industryOldUp 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-industry-old-down {
+  animation: industryOldDown 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-industry-number-up {
+  animation: industryNumberUp 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-industry-number-down {
+  animation: industryNumberDown 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-industry-content-up {
+  animation: industryContentUp 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-industry-content-down {
+  animation: industryContentDown 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
