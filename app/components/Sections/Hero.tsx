@@ -16,7 +16,42 @@ export default function Hero() {
         />
       </div>
 
-      <Container>
+      <Container className="relative">
+        {/* Blue Curve */}
+        <div
+          className="
+            pointer-events-none absolute z-0
+            h-14 w-14
+            top-4 left-2
+            sm:h-18 sm:w-18 sm:top-8 sm:left-5
+            lg:h-23.75 lg:w-23.75 lg:top-10 lg:left-8.75
+          "
+        >
+          <Image
+            src="/icons/blue-3d-curve.png"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        {/* Blue Octahedron */}
+        <div
+          className="
+      pointer-events-none absolute z-0
+      h-16 w-16
+      top-55 right-1
+      sm:h-21 sm:w-21 sm:top-64 sm:right-3
+      lg:h-27 lg:w-27 lg:top-72.5 lg:right-5.25
+    "
+        >
+          <Image
+            src="/icons/blue-3d-octahedron.png"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
         <div className="relative z-10 flex flex-col items-center mt-11.5">
           {/* Rating Badge */}
           <div className="inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-white/60 px-4 py-2 sm:px-6 sm:py-2.5 backdrop-blur-sm mb-5 sm:mb-6">
@@ -43,8 +78,26 @@ export default function Hero() {
             Bring Your Ideas to Life With
           </h1>
 
-          <h2 className="text-gradient mx-auto text-center mt-1 text-3xl leading-tight font-semibold sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px]">
+          <h2 className="relative text-gradient mx-auto text-center mt-1 text-3xl leading-tight font-semibold sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px]">
             2D Animations, Explainer Videos
+            <Image
+              src="/icons/heading-line.svg"
+              alt="Heading Line"
+              height={18}
+              width={268}
+              className="
+                w-44
+                sm:w-56
+                lg:w-[289px]
+                xl:block
+                hidden
+                h-auto
+                max-w-full
+                absolute
+                right-[23%]
+                top-[82%]
+              "
+            />
           </h2>
 
           {/* Description */}

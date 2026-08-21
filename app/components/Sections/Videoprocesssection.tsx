@@ -52,15 +52,18 @@ export default function VideoProcessSection() {
     <section className="py-16">
       <Container>
         <CustomHeading
-          line1="High-impact creative, with a proven"
-          line2="video production process."
+          reverse
+          lineBar
+          lineBarClassName="right-0 top-[80%]"
+          line2="High-impact creative, with a proven"
+          line1="video production process."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <div
               key={i}
-              className="relative rounded-[10px] overflow-hidden h-105.75"
+              className="relative h-80 overflow-hidden rounded-[10px] sm:h-96 lg:h-105.75"
             >
               <Image
                 src={item.image}
@@ -68,17 +71,20 @@ export default function VideoProcessSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute bottom-3 left-2.5 right-2.5 backdrop-blur-lg rounded-[9px] bg-black/60 text-white px-3 py-2.5 flex items-center justify-between gap-2">
+
+              <div className="absolute right-2.5 bottom-3 left-2.5 flex items-center justify-between gap-2 rounded-[9px] bg-black/60 px-3 py-2.5 text-white backdrop-blur-lg">
                 <div>
                   <p className="text-sm font-medium">{item.title}</p>
+
                   <p
                     title={item.description}
-                    className="text-xs text-white text-ellipsis line-clamp-1"
+                    className="line-clamp-1 text-xs text-white"
                   >
                     {item.description}
                   </p>
                 </div>
-                <div className="w-8 h-8 border shrink-0 bg-linear-to-b from-[#01A3EF] to-[#0F55C9] rounded-full flex items-center justify-center">
+
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border bg-linear-to-b from-[#01A3EF] to-[#0F55C9]">
                   <Play fill="white" stroke="white" size={12} />
                 </div>
               </div>

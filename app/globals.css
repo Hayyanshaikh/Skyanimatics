@@ -178,7 +178,7 @@
 
 .custom-button-outline {
   position: relative;
-  background: white;
+  background: transparent;
   border: none;
   color: var(--primary);
 }

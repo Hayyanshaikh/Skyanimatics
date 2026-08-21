@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface CustomHeadingProps {
   line1: string;
@@ -8,6 +9,8 @@ interface CustomHeadingProps {
   className?: string;
   align?: "center" | "left";
   reverse?: boolean;
+  lineBarClassName?: string;
+  lineBar?: boolean;
 }
 
 export default function CustomHeading({
@@ -17,6 +20,8 @@ export default function CustomHeading({
   line2ClassName,
   className,
   align = "center",
+  lineBarClassName,
+  lineBar = false,
   reverse,
 }: CustomHeadingProps) {
   return (
@@ -36,12 +41,24 @@ export default function CustomHeading({
         {line2 && (
           <h2
             className={cn(
-              "text-3xl md:text-[55px] font-semibold text-gradient",
+              "relative text-3xl md:text-[55px] font-semibold text-gradient",
               line2ClassName,
               reverse ? "mb-1" : "mt-1",
             )}
           >
             {line2}
+            {lineBar && (
+              <Image
+                src="/icons/heading-line.svg"
+                alt="Heading Line"
+                height={18}
+                width={268}
+                className={cn(
+                  "absolute w-44 sm:w-56 lg:w-67 h-auto max-w-full lg:block hidden",
+                  lineBarClassName,
+                )}
+              />
+            )}
           </h2>
         )}
       </div>

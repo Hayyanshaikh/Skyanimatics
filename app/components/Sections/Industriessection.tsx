@@ -57,8 +57,34 @@ const IndustriesSection = (props: Props) => {
       {/* ================================
           MAIN CONTAINER
       ================================= */}
-      <Container className="industry-container relative flex flex-col py-12 sm:py-16 lg:min-h-255 lg:py-16">
-        {/* Heading */}
+      <Container className="industry-container relative flex flex-col pt-12 pb-36 sm:pt-16 sm:pb-36 lg:min-h-285 lg:pt-16 lg:pb-46">
+        {/* ================================
+            BLUE CURVE - DESKTOP ONLY
+        ================================= */}
+        <div className="pointer-events-none absolute top-6 right-14 z-50 hidden h-21 aspect-square lg:block">
+          <Image
+            src="/icons/blue-3d-curve.png"
+            alt=""
+            fill
+            className="rotate-120 object-contain"
+          />
+        </div>
+
+        {/* ================================
+            BLUE OCTAHEDRON - DESKTOP ONLY
+        ================================= */}
+        <div className="pointer-events-none absolute bottom-0 left-1 z-50 hidden h-21 aspect-square lg:block">
+          <Image
+            src="/icons/blue-3d-octahedron.png"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        {/* ================================
+            HEADING
+        ================================= */}
         <CustomHeading
           align="left"
           line1="Industries We Are"
@@ -80,7 +106,7 @@ const IndustriesSection = (props: Props) => {
         {/* ================================
             CONTENT
         ================================= */}
-        <div className="mt-10 flex flex-col gap-10 lg:mt-auto lg:flex-row lg:items-end lg:gap-0 lg:max-w-[calc(100%-436px)]">
+        <div className="mt-10 flex flex-col gap-10 sm:mt-10 lg:mt-auto lg:max-w-[calc(100%-436px)] lg:flex-row lg:items-end lg:gap-0">
           {/* CTA + Description */}
           <div className="relative z-30 flex w-full flex-col gap-7 sm:flex-row sm:items-end lg:flex-1">
             <CustomButton className="w-fit shrink-0" variant="gradient">
@@ -101,38 +127,46 @@ const IndustriesSection = (props: Props) => {
           </div>
 
           {/* ================================
+              DARK MATTE SPHERES - DESKTOP ONLY
+          ================================= */}
+          <div className="absolute top-0 left-1/2 z-50 hidden min-w-[450px] -translate-1/2 lg:block">
+            {/* Sphere 1 */}
+            <div className="pointer-events-none absolute top-20 right-5 z-50 h-[300px] w-[200px]">
+              <Image
+                src="/icons/dark-matte-sphere.png"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {/* Sphere 2 */}
+            <div className="pointer-events-none absolute top-50 -left-20 z-50 h-[300px] w-[200px]">
+              <Image
+                src="/icons/dark-matte-sphere.png"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {/* Sphere 3 */}
+            <div className="pointer-events-none absolute top-120 right-0 z-50 h-[300px] w-[200px]">
+              <Image
+                src="/icons/dark-matte-sphere.png"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+
+          {/* ================================
               IMAGE CARD
           ================================= */}
-          <div
-            className="
-            flex flex-col justify-center
-              relative z-20 mt-2 w-full
-              border border-[#dddfe1]
-              p-4
-              sm:p-5
-              lg:absolute
-              lg:right-5.5
-              lg:top-0
-              lg:mt-0
-              lg:h-full
-              lg:max-w-109
-              lg:border-x
-              lg:border-y-0
-              lg:px-5
-              lg:py-0
-            "
-          >
+          <div className="relative z-20 mt-2 flex w-full flex-col justify-center border border-[#dddfe1] p-4 sm:p-5 lg:absolute lg:top-0 lg:right-5.5 lg:mt-0 lg:h-full lg:max-w-109 lg:border-x lg:border-y-0 lg:px-5 lg:py-0">
             {/* Inner Border */}
-            <div
-              className="
-                pointer-events-none
-                absolute inset-y-0 left-1/2
-                hidden w-[calc(100%-40px)]
-                -translate-x-1/2
-                border-x border-[#dddfe1]
-                lg:block
-              "
-            />
+            <div className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-[calc(100%-40px)] -translate-x-1/2 border-x border-[#dddfe1] lg:block" />
 
             {/* Number */}
             <h4 className="relative z-10 mb-4 text-right text-[28px] font-bold text-[#1A2937] sm:text-[32px] lg:mb-3 lg:text-[35px]">
@@ -140,16 +174,7 @@ const IndustriesSection = (props: Props) => {
             </h4>
 
             {/* Image */}
-            <div
-              className="
-                relative z-10
-                h-105 w-full
-                overflow-hidden rounded-2xl
-                sm:h-125
-                md:h-140
-                lg:h-160.5
-              "
-            >
+            <div className="relative z-10 h-105 w-full overflow-hidden rounded-2xl sm:h-125 md:h-140 lg:h-160.5">
               <Image
                 src="/images/industries-1.png"
                 alt="Healthcare industry"

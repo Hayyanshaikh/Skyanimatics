@@ -49,6 +49,9 @@ export default function BoostSection() {
         />
 
         <CustomHeading
+          lineBar
+          line2ClassName="relative"
+          lineBarClassName="absolute right-[12%] w-[202px]! top-[80%]"
           line1="Why Your Brand Needs"
           line2="Explainer Videos"
           description="Explainer videos are more than just animations they simplify your message, engage your audience, and build lasting trust."

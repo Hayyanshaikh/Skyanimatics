@@ -100,6 +100,8 @@ export default function ServicesSection() {
       <Container>
         <CustomHeading
           reverse
+          lineBar
+          lineBarClassName="right-[0%] top-[76%]"
           line2="Premier Animated"
           line1="Video Services"
           description="Bring your vision to life with captivating animated video designed to engage, explain, and inspire your audience."
