@@ -17,8 +17,9 @@ import IndustriesSection from "./components/Sections/Industriessection";
 type Props = {};
 
 export const metadata: Metadata = {
-  title: "Meta Title",
-  description: "Meta Description",
+  title: "Skyanimatics | Digital Solutions & Software Development",
+  description:
+    "Skyanimatics builds scalable digital solutions, custom software, web applications, and innovative technology products that help businesses grow.",
 };
 
 const page = (props: Props) => {

@@ -60,7 +60,7 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const serviceCards = services.map((service, i) => {
+  const serviceCards = [...services, ...services].map((service, i) => {
     const isPurple = i % 4 >= 2;
 
     return (
@@ -120,6 +120,7 @@ export default function ServicesSection() {
             spaceBetween={24}
             autoplay
             autoplayDelay={3000}
+            loop
             centeredSlides
           />
         </div>
